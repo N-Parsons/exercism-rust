@@ -71,6 +71,12 @@ fn test_ten_digit_non_armstrong_number() {
     assert!(!is_armstrong_number(3_999_999_999));
 }
 
+#[test]
+#[ignore]
+fn test_handles_u32_max() {
+    assert!(!is_armstrong_number(u32::MAX));
+}
+
 // The following number has an Armstrong sum equal to 2^32 plus itself,
 // and therefore will be detected as an Armstrong number if you are
 // incorrectly using wrapping arithmetic.
